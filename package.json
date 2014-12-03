@@ -2,7 +2,7 @@
   "name": "getOutOfCamberwell",
   "version": "1.0.0",
   "description": "simple site to show the departure times of buses and trains from my flat",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
