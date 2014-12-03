@@ -1,0 +1,22 @@
+{
+  "name": "getOutOfCamberwell",
+  "version": "0.0.0",
+  "homepage": "https://github.com/odelevingne/getOutOfCamberwell",
+  "authors": [
+    "Oliver Delevingne <oliver@delevingne.co.uk>"
+  ],
+  "main": "src/index.html",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
