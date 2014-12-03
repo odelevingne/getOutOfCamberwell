@@ -1,0 +1,19 @@
+{
+  "name": "getOutOfCamberwell",
+  "version": "1.0.0",
+  "description": "simple site to show the departure times of buses and trains from my flat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/odelevingne/getOutOfCamberwell.git"
+  },
+  "author": "Ollie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/odelevingne/getOutOfCamberwell/issues"
+  },
+  "homepage": "https://github.com/odelevingne/getOutOfCamberwell"
+}
