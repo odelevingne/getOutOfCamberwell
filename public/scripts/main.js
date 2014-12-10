@@ -3,7 +3,7 @@ $(document).ready(function(){
   getBusInfo = function() {
     $.ajax({
         type: 'GET',
-        url: 'http://localhost:4567/buses',
+        url: 'http://localhost:3333/buses',
       success: function(resp) {
         console.log("success!", resp);
       },
@@ -13,5 +13,6 @@ $(document).ready(function(){
     });
   };
 
+  getBusInfo();
 
 });
