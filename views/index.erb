@@ -43,7 +43,21 @@
                 </div>
                 <div class="col-sm-4">
                     <h1>Denmark Hill</h1>
+                    <table class="table table-hover" id="denmark-results">
+                        <tbody id="denmark-tbody"></tbody>
+                    </table>
+                    <script id="denmark-results-template" type="x-tmpl-mustache">
+                        <tr>
+                            <td>
+                                {{destination_name}}
+                            </td>
+                            <td>
+                                {{aimed_departure_time}}
+                            </td>
+                        </tr>                    
+                    </script>                
                 </div>
+
                 <div class="col-sm-4">
                     <h1>East Dulwich</h1>
                 </div>
