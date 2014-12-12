@@ -14,8 +14,10 @@ $(document).ready(function(){
 
         var busTemplate = $busResultsTemplate.html();
 
-        $.each(resp, function(i, item){
-          renderedBuses += Mustache.render(busTemplate, item);
+        $.each(resp.departures, function(i, item){
+          $.each(item, function(i, bus){
+            renderedBuses += Mustache.render(busTemplate, bus);
+          })
         });
         $busResults.append(renderedBuses);
       },
@@ -28,4 +30,3 @@ $(document).ready(function(){
   getBusInfo();
 
 });
-
