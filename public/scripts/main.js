@@ -55,7 +55,21 @@ $(document).ready(function(){
     });
   };
 
+  getEastDulwichInfo = function() {
+    $.ajax({
+      type: 'GET',
+      url: '/api/dulwich',
+      success: function(resp) {
+        console.log("success!", resp);
+      },
+      error: function(jqXHR, textStatus, errorThrown) {
+        console.error("Failure!", jqXHR, textStatus, errorThrown);
+      }
+    })
+  };
+
   getDenmarkHillInfo();
   getBusInfo();
+  getEastDulwichInfo();
 
 });
