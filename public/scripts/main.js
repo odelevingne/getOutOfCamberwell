@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
   var $busResultsTemplate = $("#bus-results-template");
-  var $busResults = $("#bus-results").find('tbody');
+  var $busResults = $("#bus-tbody")
   var $denmarkResultsTemplate = $("#denmark-results-template");
-  var $denmarkResults = $("#denmark-results").find('denmark-tbody');
-  var $busLoader = $("#bus-loader")
+  var $denmarkResults = $("#denmark-tbody");
+  var $busLoader = $("#bus-loader");
+  var $denmarkLoader = $("#denmark-loader");
 
   getBusInfo = function() {
     $.ajax({
@@ -46,6 +47,7 @@ $(document).ready(function(){
           renderedDenmark += Mustache.render(denmarkTemplate, item);
         });
         $denmarkResults.append(renderedDenmark);
+        $denmarkLoader.empty();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Failure!", jqXHR, textStatus, errorThrown);

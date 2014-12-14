@@ -29,7 +29,7 @@
                         <img src="/images/ajax-loader.gif">
                     </div>
                     <table class="table table-hover" id="bus-results">
-                        <tbody id="tbody">
+                        <tbody id="bus-tbody">
                         </tbody>
                     </table>
 
@@ -39,7 +39,7 @@
                                 {{line}}
                             </td>
                             <td>
-                                {{best_departure_estimate}}
+                                {{expected_departure_time}}
                             </td>
                         </tr>                    
                     </script>
@@ -54,6 +54,7 @@
                         <tbody id="denmark-tbody">
                         </tbody>
                     </table>
+
                     <script id="denmark-results-template" type="x-tmpl-mustache">
                         <tr>
                             <td>
@@ -63,7 +64,8 @@
                                 {{aimed_departure_time}}
                             </td>
                         </tr>                    
-                    </script>                
+                    </script>
+
                 </div>
 
                 <div class="col-sm-4">
