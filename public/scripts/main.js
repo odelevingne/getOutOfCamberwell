@@ -4,7 +4,7 @@ $(document).ready(function(){
   var $busResults = $("#bus-results").find('tbody');
   var $denmarkResultsTemplate = $("#denmark-results-template");
   var $denmarkResults = $("#denmark-results").find('denmark-tbody');
-
+  var $busLoader = $("#bus-loader")
 
   getBusInfo = function() {
     $.ajax({
@@ -23,6 +23,7 @@ $(document).ready(function(){
           });
         });
         $busResults.append(renderedBuses);
+        $busLoader.empty();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Failure!", jqXHR, textStatus, errorThrown);
