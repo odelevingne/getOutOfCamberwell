@@ -78,9 +78,29 @@
 
                 <div class="col-sm-4">
                     <h1>East Dulwich</h1>
-                    <div id="east-dulwich-loader">
+                    <table class="table table-hover" id="dulwich-results">
+                        <tbody id="dulwich-tbody">
+                            <tr>
+                                <th>Destination</th>
+                                <th>Leaving at</th>
+                            </tr>
+                        </tbody>
+                    </table> 
+                    <div id="dulwich-loader">
                         <img src="/images/ajax-loader.gif">
                     </div>
+
+                    <script id="dulwich-results-template" type="x-tmpl-mustache">
+                        <tr>
+                            <td>
+                                {{destination_name}}
+                            </td>
+                            <td>
+                                {{aimed_departure_time}}
+                            </td>
+                        </tr>                    
+                    </script>
+
                 </div>
             </div>
         </div>

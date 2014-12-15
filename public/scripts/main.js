@@ -1,11 +1,14 @@
 $(document).ready(function(){
 
   var $busResultsTemplate = $("#bus-results-template");
-  var $busResults = $("#bus-tbody")
+  var $busResults = $("#bus-tbody");
   var $denmarkResultsTemplate = $("#denmark-results-template");
   var $denmarkResults = $("#denmark-tbody");
+  var $dulwichResultsTemplate = $("#dulwich-results-template");
+  var $dulwichResults = $("#dulwich-tbody");
   var $busLoader = $("#bus-loader");
   var $denmarkLoader = $("#denmark-loader");
+  var $dulwichLoader = $("#dulwich-loader");
 
   getBusInfo = function() {
     $.ajax({
@@ -60,7 +63,17 @@ $(document).ready(function(){
       type: 'GET',
       url: '/api/dulwich',
       success: function(resp) {
-        console.log("success!", resp);
+        console.log("success! dul", resp.departures.all);
+
+        var renderedDulwich = '';
+
+        var dulwichTemplate = $dulwichResultsTemplate.html();
+
+        $.each(resp.departures.all, function(i, item){
+          renderedDulwich += Mustache.render(dulwichTemplate, item);
+        });
+        $dulwichResults.append(renderedDulwich);
+        $dulwichLoader.empty();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Failure!", jqXHR, textStatus, errorThrown);
