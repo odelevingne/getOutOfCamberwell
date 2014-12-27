@@ -1,1 +1,2 @@
-A simple app using the Transport API to let me know the quickest way out of Camberwell.
+# Get Out of Camberwell!
+A simple website displaying the next departures from East Dulwich and Denmark Hill train stations and Champion Hill bus stop, allowing me to know the quickest route to anywhere.
