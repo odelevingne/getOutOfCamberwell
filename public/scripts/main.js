@@ -27,7 +27,7 @@ $(document).ready(function(){
           });
         });
         $busResults.append(renderedBuses);
-        $busLoader.empty();
+        $busLoader.hide();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Failure!", jqXHR, textStatus, errorThrown);
@@ -50,7 +50,7 @@ $(document).ready(function(){
           renderedDenmark += Mustache.render(denmarkTemplate, item);
         });
         $denmarkResults.append(renderedDenmark);
-        $denmarkLoader.empty();
+        $denmarkLoader.hide();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Failure!", jqXHR, textStatus, errorThrown);
@@ -73,7 +73,7 @@ $(document).ready(function(){
           renderedDulwich += Mustache.render(dulwichTemplate, item);
         });
         $dulwichResults.append(renderedDulwich);
-        $dulwichLoader.empty();
+        $dulwichLoader.hide();
       },
       error: function(jqXHR, textStatus, errorThrown) {
         console.error("Failure!", jqXHR, textStatus, errorThrown);
